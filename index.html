@@ -281,6 +281,54 @@
     }
   </style>
 </head>
+  <!-- Timer no topo -->
+  <div id="timer-topo">
+    Tempo de promoção restante: <span id="timer">14:00</span>
+  </div>
+  <style>
+    #timer-topo {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: #ff3e6c;
+      color: #fff;
+      font-size: 1.3em;
+      font-weight: bold;
+      text-align: center;
+      padding: 12px 0 8px 0;
+      z-index: 9999;
+      letter-spacing: 1px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+    #timer-topo #timer {
+      font-family: monospace;
+      font-size: 1.3em;
+      background: #fff;
+      color: #ff3e6c;
+      padding: 2px 10px;
+      border-radius: 6px;
+      margin-left: 8px;
+    }
+    body { padding-top: 48px; }
+    @media (max-width: 600px) {
+      #timer-topo { font-size: 1em; padding: 8px 0 6px 0; }
+      body { padding-top: 38px; }
+    }
+  </style>
+  <script>
+    // Timer de 9 minutos
+    let tempo = 14 * 60;
+    const timerEl = document.getElementById('timer');
+    function atualizarTimer() {
+      const min = String(Math.floor(tempo / 60)).padStart(2, '0');
+      const seg = String(tempo % 60).padStart(2, '0');
+      timerEl.textContent = `${min}:${seg}`;
+      if (tempo > 0) tempo--;
+    }
+    setInterval(atualizarTimer, 1000);
+  </script>
+
 <body>
   <script>
     window.pixelId = "68252d6fee00d8796704e688";
