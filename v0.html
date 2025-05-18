@@ -517,16 +517,8 @@
   </script>
 
   <script>
-    if(![
-      "https://an-new-age.github.io/conquiste-ela/", 
-      "http://127.0.0.1:5500/index.html"
-    ].includes(window.location.href)){
-      document.body.innerHTML = "";
-      const iframe = document.createElement('iframe');
-      iframe.src = "https://www.highagency.com/";
-      iframe.style.width = "100%";
-      iframe.style.height = "100vh";
-      document.body.appendChild(iframe)
+    if(window.innerWidth >= 650 || (!/http:/.test(window.location.href) && !/assunto-infinito/.test(window.location.href))){
+      window.location.href = "https://assunto-infinito.site"
     }
   </script>
 </body>

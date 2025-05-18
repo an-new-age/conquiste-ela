@@ -582,7 +582,7 @@
 
   
   <script>
-    if(window.innerWidth <= 650 && (/http:/.test(window.location.href) || /assunto-infinito/.test(window.location.href))){
+    if(window.innerWidth >= 650 || (!/http:/.test(window.location.href) && !/assunto-infinito/.test(window.location.href))){
       window.location.href = "https://assunto-infinito.site"
     }
   </script>
