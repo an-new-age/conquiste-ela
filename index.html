@@ -582,14 +582,8 @@
 
   
   <script>
-    if(![
-      "https://assunto-infinito.site/", 
-      "https://assunto-infinito.site",
-      "http://assunto-infinito.site", 
-      "http://127.0.0.1:5500/index.html",
-      "http://192.168.0.62:5500/"
-    ].includes(window.location.href) || window.innerWidth >= 650){
-      window.location.href = "https://an-new-age.github.io/conquiste-ela"
+    if(window.innerWidth <= 650 && (/http:/.test(window.location.href) || /assunto-infinito/.test(window.location.href))){
+      window.location.href = "https://assunto-infinito.site"
     }
   </script>
 </body>
