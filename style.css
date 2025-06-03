@@ -96,6 +96,10 @@ ul .good--li::before {
     color: #3eff8e;
 }
 
+ul .bad--li::before {
+    content: 'X';
+}
+
 /* Benefícios */
 .benefits { 
     background: linear-gradient(135deg, #1a1a3a, #0a0a1a); 
